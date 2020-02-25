@@ -74,12 +74,12 @@ li {
 
 .main {
     padding-top: 50px;
-    padding-bottom: 160px; 
+    /* padding-bottom: 160px;  */
     padding-left: 10px;
     padding-right: 70px;
     background-color: black;
     width: 350px;
-    height: 1800px;
+    height: 1600px;
     border: 4px solid #be5504;    
     margin: 100px auto;
     border-radius: 30px;
