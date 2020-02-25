@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="header">
-            <div class="header-logo">Takshashila Library</div>
+            <div class="header-logo">ChatApp</div>
             <div class="header-menu">
                 <ul>
                     <li><a href="#" class="button button1">Login</a></li>
@@ -17,34 +17,34 @@
             </div>
         </div>
         <div class="main">
-            <form>
+            <form id="Register">
                 <fieldset>
                   <legend><span class="number">1</span>Basic details</legend>
                   <label>Name</label>
-                  <input type="text" class="slct" required>
+                  <input type="text" class="slct" name="name" id="name" required>
                   <label>Date Of Birth</label>
-                  <input type="date" class="slct" required>
+                  <input type="date" class="slct" name="Dob" id="Dob" required>
                   <label>E-mail</label>
-                  <input type="text" class="slct" required>
+                  <input type="text" class="slct" name="email" id= "email" required>
                   <label>Phone Number</label>
-                  <input type="email" class="slct" required>  
+                  <input type="email" class="slct" name= "phno" id="phno" required>  
                   <label>New Password</label>
-                  <input type="password" class="slct" required>
+                  <input type="password" class="slct" name="password" id="password" required>
                 </fieldset>     
 
                 <fieldset>
                   <legend><span class="number">2</span>Address details</legend>
                   <label>Door No</label>
-                  <input type="text" class="slct" required>
+                  <input type="text" class="slct" name="Doorno" id="Doorno" required>
                   <label>Street name</label>
-                  <input type="text" class="slct" required>
+                  <input type="text" class="slct" name="Streetname" id="Streetname" required>
                   <label>City</label>
-                  <input type="text" class="slct" required>
+                  <input type="text" class="slct" name="city" id="city" required>
                   <label>Postal code</label>
-                  <input type="text" class="slct" required>
+                  <input type="text" class="slct" name="postalcode" id="postalcode" required>
                 </fieldset>      
                 
-                <fieldset>
+                <!-- <fieldset>
                     <legend><span class="number">3</span>Book preferences</legend>
                     <label>Preference - 1</label>
                     <select class="slct" required>
@@ -86,19 +86,19 @@
                         <option value="art">Art</option>
                     </select>
                 </fieldset>  
-                
+                 -->
                 <fieldset>
                     <legend><span class="number">4</span>KYC Details</legend>
                     <label>KYC document type</label>
-                    <select class="slct" required>
+                    <select class="slct" name="KYCtype" id="KYCtype" required>
                         <option value="aadhaar">Aadhaar card</option>
                         <option value="pan">PAN card</option>
                         <option value="driving license">Driving license</option>
                     </select>
                     <label>KYC id number</label>
-                    <input type="text" class="slct" required>
+                    <input type="text" class="slct" name="Kycid" id="Kycid" required>
                     <label for="img">KYC image</label>
-                    <input type="file" class="slct-img" accept="image/*">
+                    <input type="file" class="slct-img" name="Kycimg" id="Kycimg" accept="image/*">
                 </fieldset> 
                 
                 <input type="submit" value="Sign Up" class="submit">
@@ -107,12 +107,12 @@
         </div>
         <div class="footer">
             <div class="footer-cright">
-                <p>&#169 Takshashila Library 2020</p>
+                <p> ChatApp 2.0 </p>
             </div>
             <div class="footer-menu">
                 <address>
                     Contact us at:<br>
-                    takshashila.lib@bl.edu<br>
+                    ChatApp2.0.edu<br>
                     Amrita Vishwa Vidyapeetham, Kasavanahalli<br>
                     Bengaluru-560035<br>
                     Karnataka<br>
@@ -120,5 +120,7 @@
                 </address>
             </div>
         </div>
+
+        <script src="Register.js"></script>
     </body>
 </html>
