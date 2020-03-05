@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>FirebaseUI Auth Demo</title>
+    <link rel="stylesheet" href="css/css7.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-logo">ChatApp</div>
+  </div>
+  <div id="usid"><%=query1.userId %></div>
+  <script src="/__/firebase/7.9.2/firebase-app.js"></script>
+		<script src="/__/firebase/7.9.2/firebase-auth.js"></script>
+        <script src="/__/firebase/7.9.3/firebase-firestore.js"></script>
+		<script src="/__/firebase/init.js"></script>
+        <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDBLiEhnCOBRBOCr00ajLDnjoCyKIz4WSo",
+    authDomain: "chatapp-ec52c.firebaseapp.com",
+    databaseURL: "https://chatapp-ec52c.firebaseio.com",
+    projectId: "chatapp-ec52c",
+    storageBucket: "chatapp-ec52c.appspot.com",
+    messagingSenderId: "801791122441",
+    appId: "1:801791122441:web:94cb40c9a7248d187cacd8"
+  };
+  // Initialize Firebase
+//   firebase.initializeApp(firebaseConfig);
+
+  // make auth and firestore references
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  // db.settings({timestampsInSnapshots:true});
+
+    console.log(document.getElementById("usid").innerHTML);
+    var uid=document.getElementById("usid").innerHTML;
+
+    const users=document.querySelector("#register");
+    function renderReg(doc){
+      let uli = document.getElementById("register");
+
+      let Name=document.createElement('li');
+      let email=document.createElement('li');
+      let phno=document.createElement('li');
+      let dob=document.createElement('li');
+
+      //li.setAttribute('data-id',doc.id);
+      Name.textContent="Name :   "+doc.data().name;
+      email.textContent="E-mail :    "+doc.data().email;
+      phno.textContent="Phone Number:   "+doc.data().phno;
+      dob.textContent="Date Of birth:   "+doc.data().dob;
+
+    // $('#Users').append("<ul></ul>")
+    // var email;
+    // var Name;
+    // $
+      uli.appendChild(Name);
+      uli.appendChild(email);
+      uli.appendChild(dob);
+      uli.appendChild(phno);
+
+      uli.setAttribute("class","details");
+    }
+
+    db.collection('Users').doc(uid).get().then(function(doc) {
+      if(doc.exists) {
+        console.log("data is ", doc.data());
+        renderReg(doc);
+      }
+      else {
+        console.log("no document");
+      }
+    }
+      )
+      .catch(function(error) {
+        console.log("error"+error);
+      })
+  </script>
+  
+  <h1 align="center">Hi! There ; )</h1>
+  <ul id="register">
+    
+  </ul> 
+    <script>
+// var ide=getQueryVariable(hr);
+// console.log(ide);
+    </script>
+  </body>
+</html>    
