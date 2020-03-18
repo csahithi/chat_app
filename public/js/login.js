@@ -1,4 +1,9 @@
-
+window.onload = function() {
+  const myInput = document.getElementById('password');
+  myInput.onpaste = function(e) {
+    e.preventDefault();
+  }
+ }
 var admin=require("firebase-admin")
 function login() {
   firebase
